@@ -1,19 +1,4 @@
--- Auto-generated from schema-views-mysql.psd1 (map@db2f8b8)
--- engine: mysql
--- table:  schema_registry
--- Contract view for [schema_registry]
-CREATE OR REPLACE ALGORITHM=MERGE SQL SECURITY INVOKER VIEW vw_schema_registry AS
-SELECT
-  id,
-  system_name,
-  component,
-  version,
-  checksum,
-  applied_at,
-  meta
-FROM schema_registry;
-
--- Auto-generated from schema-views-mysql.psd1 (map@db2f8b8)
+-- Auto-generated from schema-views-mysql.psd1 (map@62c9c93)
 -- engine: mysql
 -- table:  schema_registry_versions_latest
 -- Latest version per system/component
@@ -39,4 +24,19 @@ SELECT
 FROM ranked
 WHERE rn = 1
 ORDER BY system_name, component;
+
+-- Auto-generated from schema-views-mysql.psd1 (map@62c9c93)
+-- engine: mysql
+-- table:  schema_registry
+-- Contract view for [schema_registry]
+CREATE OR REPLACE ALGORITHM=MERGE SQL SECURITY INVOKER VIEW vw_schema_registry AS
+SELECT
+  id,
+  system_name,
+  component,
+  version,
+  checksum,
+  applied_at,
+  meta
+FROM schema_registry;
 
