@@ -1,4 +1,4 @@
--- Auto-generated from joins-postgres.yaml (map@94ebe6c)
+-- Auto-generated from joins-postgres.yaml (map@85230ed)
 -- engine: postgres
 -- view:   schema_registry_versions_latest
 
