@@ -1,6 +1,6 @@
 -- Auto-generated from joins-postgres.yaml (map@85230ed)
 -- engine: postgres
--- view:   schema_registry_versions_latest
+-- view:   schema_versions_latest
 
 -- Latest version per system/component
 CREATE OR REPLACE VIEW vw_schema_versions_latest AS
