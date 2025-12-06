@@ -1,6 +1,7 @@
--- Auto-generated from schema-map-mysql.psd1 (map@62c9c93)
+-- Auto-generated from schema-map-mysql.yaml (map@sha1:5E62933580349BE7C623D119AC9D1301A62F03EF)
 -- engine: mysql
 -- table:  schema_registry
+
 CREATE TABLE IF NOT EXISTS schema_registry (
   id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   system_name VARCHAR(120) NOT NULL,

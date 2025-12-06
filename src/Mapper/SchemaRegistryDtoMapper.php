@@ -17,7 +17,7 @@ use BlackCat\Database\Support\DtoHydrator;
 final class SchemaRegistryDtoMapper
 {
     /** @var array<string,string> Column -> DTO property */
-    private const COL_TO_PROP = [ 'system_name' => 'systemName', 'applied_at' => 'appliedAt' ];
+    private const COL_TO_PROP = [ 'id' => 'id', 'system_name' => 'systemName', 'component' => 'component', 'version' => 'version', 'checksum' => 'checksum', 'applied_at' => 'appliedAt', 'meta' => 'meta' ];
 
     /** @var string[] */
     private const BOOL_COLS   = [];
@@ -39,13 +39,8 @@ final class SchemaRegistryDtoMapper
 
     private static function tz(): DateTimeZone
     {
-        if (self::$tzObj instanceof DateTimeZone) {
-            return self::$tzObj;
-        }
-        try {
+        if (!(self::$tzObj instanceof DateTimeZone)) {
             self::$tzObj = new DateTimeZone(self::TZ);
-        } catch (\Throwable) {
-            self::$tzObj = new DateTimeZone('UTC');
         }
         return self::$tzObj;
     }
