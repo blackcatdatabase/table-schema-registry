@@ -5,13 +5,13 @@ Registry of schema versions applied to various components.
 ## Columns
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
-| applied_at | DATETIME(6) | NO | CURRENT_TIMESTAMP(6) | When the version was applied. |
 | component | VARCHAR(120) | NO |  | Component name (db, api, etc.). |
-| checksum | VARCHAR(64) | YES |  | Checksum/signature of the migration bundle. |
 | id | BIGINT | NO |  | Surrogate primary key. |
-| meta | mysql: JSON / postgres: JSONB | YES |  | JSON metadata with migration context. |
 | system_name | VARCHAR(120) | NO |  | System/service name. |
+| applied_at | DATETIME(6) | NO | CURRENT_TIMESTAMP(6) | When the version was applied. |
+| checksum | VARCHAR(64) | YES |  | Checksum/signature of the migration bundle. |
 | version | VARCHAR(64) | NO |  | Version identifier. |
+| meta | mysql: JSON / postgres: JSONB | YES |  | JSON metadata with migration context. |
 
 ## Engine Details
 
