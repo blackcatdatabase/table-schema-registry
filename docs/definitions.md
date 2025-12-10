@@ -9,7 +9,7 @@ Registry of schema versions applied to various components.
 | component | VARCHAR(120) | NO |  | Component name (db, api, etc.). |
 | checksum | VARCHAR(64) | YES |  | Checksum/signature of the migration bundle. |
 | id | BIGINT | NO |  | Surrogate primary key. |
-| meta | JSON | YES |  | JSON metadata with migration context. |
+| meta | mysql: JSON / postgres: JSONB | YES |  | JSON metadata with migration context. |
 | system_name | VARCHAR(120) | NO |  | System/service name. |
 | version | VARCHAR(64) | NO |  | Version identifier. |
 
