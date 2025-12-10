@@ -6,8 +6,8 @@ Registry of schema versions applied to various components.
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
 | applied_at | DATETIME(6) | NO | CURRENT_TIMESTAMP(6) | When the version was applied. |
-| component | VARCHAR(120) | NO |  | Component name (db, api, etc.). |
 | checksum | VARCHAR(64) | YES |  | Checksum/signature of the migration bundle. |
+| component | VARCHAR(120) | NO |  | Component name (db, api, etc.). |
 | id | BIGINT | NO |  | Surrogate primary key. |
 | meta | mysql: JSON / postgres: JSONB | YES |  | JSON metadata with migration context. |
 | system_name | VARCHAR(120) | NO |  | System/service name. |
