@@ -5,13 +5,13 @@ Registry of schema versions applied to various components.
 ## Columns
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
-| applied_at | DATETIME(6) | NO | CURRENT_TIMESTAMP(6) | When the version was applied. |
-| component | VARCHAR(120) | NO |  | Component name (db, api, etc.). |
-| checksum | VARCHAR(64) | YES |  | Checksum/signature of the migration bundle. |
 | id | BIGINT | NO |  | Surrogate primary key. |
-| meta | JSON | YES |  | JSON metadata with migration context. |
 | system_name | VARCHAR(120) | NO |  | System/service name. |
+| component | VARCHAR(120) | NO |  | Component name (db, api, etc.). |
 | version | VARCHAR(64) | NO |  | Version identifier. |
+| checksum | VARCHAR(64) | YES |  | Checksum/signature of the migration bundle. |
+| applied_at | DATETIME(6) | NO | CURRENT_TIMESTAMP(6) | When the version was applied. |
+| meta | mysql: JSON / postgres: JSONB | YES |  | JSON metadata with migration context. |
 
 ## Engine Details
 
@@ -46,7 +46,7 @@ Indexes:
 ## Views
 | View | Engine | Flags | File |
 | --- | --- | --- | --- |
-| vw_schema_registry | mysql | algorithm=MERGE, security=INVOKER | [schema\040_views.mysql.sql](schema\040_views.mysql.sql) |
-| vw_schema_versions_latest | mysql | algorithm=TEMPTABLE, security=INVOKER | [schema\040_views_joins.mysql.sql](schema\040_views_joins.mysql.sql) |
-| vw_schema_registry | postgres |  | [schema\040_views.postgres.sql](schema\040_views.postgres.sql) |
-| vw_schema_versions_latest | postgres |  | [schema\040_views_joins.postgres.sql](schema\040_views_joins.postgres.sql) |
+| vw_schema_registry | mysql | algorithm=MERGE, security=INVOKER | [../schema/040_views.mysql.sql](../schema/040_views.mysql.sql) |
+| vw_schema_versions_latest | mysql | algorithm=TEMPTABLE, security=INVOKER | [../schema/040_views_joins.mysql.sql](../schema/040_views_joins.mysql.sql) |
+| vw_schema_registry | postgres |  | [../schema/040_views.postgres.sql](../schema/040_views.postgres.sql) |
+| vw_schema_versions_latest | postgres |  | [../schema/040_views_joins.postgres.sql](../schema/040_views_joins.postgres.sql) |
