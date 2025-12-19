@@ -5,10 +5,10 @@
         "applied_at": {
           "strategy": "passthrough"
         },
-        "component": {
+        "checksum": {
           "strategy": "passthrough"
         },
-        "checksum": {
+        "component": {
           "strategy": "passthrough"
         },
         "id": {
