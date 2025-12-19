@@ -1,0 +1,29 @@
+{
+  "tables": {
+    "schema_registry": {
+      "columns": {
+        "applied_at": {
+          "strategy": "passthrough"
+        },
+        "checksum": {
+          "strategy": "passthrough"
+        },
+        "component": {
+          "strategy": "passthrough"
+        },
+        "id": {
+          "strategy": "passthrough"
+        },
+        "meta": {
+          "strategy": "passthrough"
+        },
+        "system_name": {
+          "strategy": "passthrough"
+        },
+        "version": {
+          "strategy": "passthrough"
+        }
+      }
+    }
+  }
+}
